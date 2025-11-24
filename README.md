@@ -1,1 +1,1 @@
-https://mvromatrishkin.github.io/zakrivayuschiy-teg-f/
+git@github.com:MVRomaTrishkin/zakrivayuschiy-teg-f.git
