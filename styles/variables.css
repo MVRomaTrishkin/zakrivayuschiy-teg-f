@@ -1,1 +1,28 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+:root {
+  --main-font: 'Press Start 2P';
+  --main-font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
+  --text-font-size: clamp(0.875rem, 1.1391rem + -1.1268vw, 0.125rem);
+  --acent-font: 'Inter';
+  --title-weight: 715;
+  --text-weight: 410;
+  --acent-color: #000;
+  --countor: #000;
+  --animation-fill-color: red;
+  --sparks-color: red;
+  --button-text-weight: 400;
+  --page-gradient:  repeating-linear-gradient(to right, 
+      #d3d3d3 0px, 
+      #d3d3d3 2px, 
+      transparent 2px, 
+      transparent 4px
+    ),
+    repeating-linear-gradient(to bottom, 
+      #d3d3d3 0px, 
+      #d3d3d3 2px, 
+      transparent 2px, 
+      transparent 4px
+    ),
+    linear-gradient(to bottom, #e7e7e7, #1a1a1a);
+  --liquid-width: clamp(375px, 50%, 1440px);
+}
