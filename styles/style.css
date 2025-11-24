@@ -15,7 +15,7 @@
   max-inline-size: 1440px;
   min-block-size: 100dvb;
   font-family: var(--main-font), sans-serif;
-  font-variation-settings: var(--text-weight);
+  font-variation-settings: "wght" var(--text-weight);
   background-image: var(--page-gradient);
   background-size: cover;
   background-attachment: fixed;
@@ -204,7 +204,7 @@
 
 .card__like-button:focus {
   outline: none;
-  box-shadow: 2px 2px  0 var(--acent-color); 
+  box-shadow: 2px 2px  0 var(--acent-color);
 }
 
 .card__like-button::before {
@@ -296,7 +296,7 @@
 
 .dialog__button:focus {
   outline: none;
-  box-shadow: 2px 2px  0 var(--acent-color); 
+  box-shadow: 2px 2px  0 var(--acent-color);
 }
 
 .dialog__button::before {
@@ -326,7 +326,7 @@
   background-color: #fff;
 }
 
-.open:hover .floppy{
+.open:hover .floppy {
   stroke: #fff;
   mix-blend-mode: difference;
 }
@@ -368,7 +368,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  border: 2px solid var(--acent-color); 
+  border: 2px solid var(--acent-color);
   padding: 30px;
   max-width: clamp(341px, 50%, 353px);
   background-color: #fff;
