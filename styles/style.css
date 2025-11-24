@@ -192,8 +192,6 @@
   transform-origin: center;
 }
 
-
-
 .card__like-button:focus .heart {
   outline: none;
 }
@@ -208,7 +206,6 @@
   outline: none;
   box-shadow: 2px 2px  0 var(--acent-color); 
 }
-
 
 .card__like-button::before {
   content: "";
@@ -228,7 +225,6 @@
   color: #fff;
   mix-blend-mode: difference;
 }
-
 
 .img2 {
   filter: contrast(0.9) grayscale(0.6);
@@ -269,8 +265,6 @@
   width: 21px;
   height: 21px;
 }
-
-
 
 .button__text {
   position: relative;
@@ -390,7 +384,6 @@
     text-stroke: 1px #fff;
   }
 }
-/*Анимации сердца contour sparks core main-body*/
 
 .sparks {
   opacity: 0;
@@ -409,8 +402,6 @@
   fill: transparent;
   transition: fill 0.3s linear;
 }
-
-
 
 @media (width <= 376px) {
   .open {
