@@ -319,9 +319,6 @@
   transform: scaleX(1);
 }
 
-.dialog__button:hover .button__text {
-}
-
 .open {
   display: flex;
   align-items: center;
