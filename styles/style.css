@@ -19,9 +19,11 @@
   background-image: var(--page-gradient);
   background-size: cover;
   background-attachment: fixed;
+  margin: 0 auto;
 }
 
 .content {
+  inline-size: clamp(375px, 700px, 700px);
   max-inline-size: var(--liquid-width);
   margin: 0 auto;
 }
@@ -32,7 +34,6 @@
   text-align: center;
   background-color: white;
   margin: 0 auto;
-  padding-right: 10px;
   border: 2px solid var(--acent-color);
   margin-block-start: 98px;
   margin-block-end: 98px;
@@ -63,22 +64,23 @@
 
 .section__img {
   inline-size: 100%;
+  border: 2px solid var(--acent-color);
 }
 
 .content__section-title {
   font-size: 18px;
   line-height: 22px;
   font-family: var(--acent-font), sans-serif;
-  padding: 6px 10px;
+  padding: 4px 10px;
 }
 
 .content__section-text {
-  padding: 22px 25px 25px 25px;
+  padding: 20px 25px 25px 25px;
   word-spacing: 3px;
 }
 
 .section-text:first-child {
-  margin-block-end: 25px;
+  margin-block-end: 22px;
   padding-right: 12px;
   padding-top: 2.5px;
 }
@@ -87,7 +89,7 @@
   font-family: var(--acent-font), sans-serif;
   font-size: 18px;
   line-height: 21px;
-  font-weight: 410;
+  font-variation-settings: 'wght' 410;
 }
 
 .button {
@@ -95,11 +97,12 @@
   gap: 7px;
   justify-content: flex-end;
   padding-right: 25px;
-  padding-bottom: 24px;
+  padding-bottom: 23px;
   position: relative;
 }
 
 .card__like-button {
+  cursor: pointer;
   position: relative;
   inline-size: 130px;
   max-inline-size: 130px;
@@ -107,10 +110,11 @@
   background: transparent;
   border: 2px solid var(--acent-color);
   font-size: 14px;
-  transition: box-shadow, 0.3s ease;
+  transition: box-shadow 0.3s ease;
 }
 
 .card__icon-button {
+  cursor: pointer;
   display: flex;
   align-items: start;
   background-color: #fff;
@@ -192,18 +196,14 @@
   transform-origin: center;
 }
 
-.card__like-button:focus .heart {
-  outline: none;
-}
-
-.card__like-button:focus-visible .heart {
-  transition: outline 0.3s ease;
-  outline: 2px solid var(--acent-color);
-  outline-offset: 5.8px;
-}
-
 .card__like-button:focus {
   outline: none;
+}
+
+.card__like-button:focus-visible {
+  transition: box-shadow 0.3s ease;
+  outline: 2px solid var(--acent-color);
+  outline-offset: 5.8px;
   box-shadow: 2px 2px  0 var(--acent-color);
 }
 
@@ -221,36 +221,32 @@
   transform: scaleX(1);
 }
 
-.card__like-button:hover .button__text {
-  color: #fff;
-  mix-blend-mode: difference;
-}
 
-.img2 {
+.contrast {
   filter: contrast(0.9) grayscale(0.6);
 }
 
-.img3 {
+.saturate {
   filter: saturate(300%);
 }
 
-.img4 {
+.hue-rotate {
   filter: hue-rotate(45deg);
 }
 
-.img5 {
+.invert {
   filter: invert(0.8);
 }
 
-.img6 {
+.sepia {
   filter: sepia(80);
 }
 
-.img7 {
+.blur {
   filter: blur(10px);
 }
 
-.img8 {
+.hue-rotate-contrast {
   filter: hue-rotate(115deg) contrast(0.5);
 }
 
@@ -270,6 +266,8 @@
   position: relative;
   font-size: 14px;
   line-height: 90%;
+  color: #fff;
+  mix-blend-mode: difference;
 }
 
 .cover_image {
@@ -283,7 +281,15 @@
   mix-blend-mode: hard-light;
   font-size: 14px;
   opacity: 0.6;
-  -webkit-text-stroke: 1px #fff;
+  text-shadow: 1px #fff;
+}
+
+@supports (-webkit-text-stroke: 1px #fff) or (text-stroke: 1px #fff) {
+  .cover_image-text {
+    -webkit-text-stroke: 1px #fff;
+    text-stroke: 1px #fff;
+    text-shadow: none;
+  }
 }
 
 .dialog__button {
@@ -314,13 +320,12 @@
 }
 
 .dialog__button:hover .button__text {
-  color: #fff;
-  mix-blend-mode: difference;
 }
 
 .open {
   display: flex;
-  align-items: baseline;
+  align-items: center;
+  max-block-size: 55px;
   gap: 8px;
   padding: 20px;
   background-color: #fff;
@@ -346,7 +351,6 @@
   justify-items: center;
   align-self: center;
   font-size: 14px;
-  font-weight: 410;
   line-height: 150%;
   margin-block-end: 30px;
 }
@@ -389,19 +393,6 @@
   opacity: 0;
 }
 
-.contour {
-  transition: fill 0.1s linear;
-}
-
-.core {
-  fill: transparent;
-  transition: fill 0.3s linear 0.3s;
-}
-
-.main-body {
-  fill: transparent;
-  transition: fill 0.3s linear;
-}
 
 @media (width <= 376px) {
   .open {
@@ -410,6 +401,8 @@
     max-inline-size: 306px;
     inline-size: 306px;
     padding: 17px 18px;
+    max-block-size: 84px;
+    block-size: 84px;
   }
   .floppy {
     width: 28px;
@@ -422,5 +415,14 @@
 
   #floppy {
     width: 100px;
+  }
+
+  .content__section {
+    margin-bottom: 51px;
+  }
+
+  .content__section-text {
+  padding: 25px 25px 25px 25px;
+  word-spacing: 3px;
   }
 }

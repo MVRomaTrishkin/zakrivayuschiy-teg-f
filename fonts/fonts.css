@@ -15,5 +15,5 @@
   url(.fonts\Inter-Variable.woff2) format('woff2-variations'),
   local('Inter');
   font-display: swap;
-  font-weight: 400 410 785;
+  font-weight: 400 785;
 }
