@@ -72,6 +72,7 @@
   line-height: 22px;
   font-family: var(--acent-font), sans-serif;
   padding: 4px 10px;
+  font-variation-settings: 'wght' 715;
 }
 
 .content__section-text {
@@ -136,6 +137,7 @@
   border: 2px solid var(--acent-color);
   font-weight: 400;
   font-size: 14px;
+  transition: box-shadow 0.3s ease;
 }
 
 .button:focus {
@@ -153,7 +155,6 @@
 }
 
 .button:focus-visible {
-  transition: box-shadow 0.3s ease;
   box-shadow: 2px 2px  0 var(--acent-color);
 }
 
@@ -304,7 +305,7 @@
   right: 25px;
   mix-blend-mode: hard-light;
   font-size: 14px;
-  opacity: 0.6;
+  opacity: 0.5;
   text-shadow: 1px #fff;
 }
 
@@ -353,12 +354,6 @@
 
 .dialog::backdrop {
   background-color: rgba(0, 0, 0, 0.8);
-}
-
-@supports  (text-stroke: 1px #fff) {
-  .cover_image-text {
-    text-stroke: 1px #fff;
-  }
 }
 
 .sparks {
